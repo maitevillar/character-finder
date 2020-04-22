@@ -5,12 +5,14 @@ _Desarrollo web de una aplicación basada en React para buscar información ento
 ## Contenido
 
 - Comenzando
+- Instalación
+- Estructura
 
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-_-Para guardar este proyecto local:_
+_Para guardar este proyecto local:_
 
 [Enlace a la documentación de Github](https://help.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 
@@ -37,7 +39,9 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 Necesitarás instalar 📋 Node.js para trabajar con este repositorio, luego:
 
 1. Descarga o clona el repositorio. ⚙️
+```
 $ git clone https://github.com/Adalab/project-promo-i-module-3-team-2-afternoon
+```
 2. Abre el proyecto en tu editor de codigo (Visual Sudio Code, Atom, Brackets...)
 3. Instala las dependencias locales
 ```
