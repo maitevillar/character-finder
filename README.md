@@ -10,7 +10,8 @@ _Desarrollo web de una aplicación basada en React para buscar información ento
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-_.Para guardar este proyecto local:_
+_-Para guardar este proyecto local:_
+
 [Enlace a la documentación de Github](https://help.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 
 1. Estas en la página principal del repositorio.
@@ -48,35 +49,6 @@ $ npm start
 ```
 
 ## Estructura 💻
-
-/
-`- _public
-   |   `favicon.ico
-   |   `index.html
-   |   `manifest.json
-   |   `robots.txt
-`- _src
-   |- components
-   |  `App.js
-   |- images
-   - services
-   |  |   `FetchService.js
-   |- stylesheets
-   | `|- base 
-   |  |      `- _reset.scss
-   |  |      `- _normalize.scss
-   |  |- layouts
-   |  |      `- _app.scss
-   |  |- utils
-   |  |      `- _mixins.scss
-   |  |      `- _variables.scss
-   |   `- App.scss
-   |  |    |
-   |`- index.js
-`- .gitignore
-`- package-lock.json
-`- package.json
-`- README.md
 
 
 
