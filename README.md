@@ -1,68 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Ricky & Morty browser
 
-## Available Scripts
+_Desarrollo web de una aplicación basada en React para buscar información entorno a los personajes de la serie de Rick y morty._
 
-In the project directory, you can run:
+## Contenido
 
-### `npm start`
+- Comenzando
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Comenzando 🚀
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-### `npm test`
+_.Para guardar este proyecto local:_
+[Enlace a la documentación de Github](https://help.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Estas en la página principal del repositorio.
+2. Bajo el nombre del repositorio, click *clone* or *download*
+3. Para clonar el repositorio usando _HTTPS_, click "clone with HTTP".
+4. Abre la terminal y cambia a la ubicación donde deseas que se colne el directorio.
+5. Escribe "git clone", y luego pega la URL que copiaste en el paso 2.
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+6. Presiona Enter (Intro). Se creará tu clon local.
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `Spoon-Knife`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
 
-### `npm run build`
+### Instalación 🔧
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Necesitarás instalar 📋 Node.js para trabajar con este repositorio, luego:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. Descarga o clona el repositorio. ⚙️
+$ git clone https://github.com/Adalab/project-promo-i-module-3-team-2-afternoon
+2. Abre el proyecto en tu editor de codigo (Visual Sudio Code, Atom, Brackets...)
+3. Instala las dependencias locales
+```
+$ npm install
+```
+4. Arranca el proyecto:
+```
+$ npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Estructura 💻
 
-### `npm run eject`
+/
+`- _public
+   |   `favicon.ico
+   |   `index.html
+   |   `manifest.json
+   |   `robots.txt
+`- _src
+   |- components
+   |  `App.js
+   |- images
+   - services
+   |  |   `FetchService.js
+   |- stylesheets
+   | `|- base 
+   |  |      `- _reset.scss
+   |  |      `- _normalize.scss
+   |  |- layouts
+   |  |      `- _app.scss
+   |  |- utils
+   |  |      `- _mixins.scss
+   |  |      `- _variables.scss
+   |   `- App.scss
+   |  |    |
+   |`- index.js
+`- .gitignore
+`- package-lock.json
+`- package.json
+`- README.md
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
+⌨️ con ❤️ por [Maite Villar]
