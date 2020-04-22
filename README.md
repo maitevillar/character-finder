@@ -1,4 +1,4 @@
-# Ricky & Morty browser
+# Rick & Morty browser
 
 _Desarrollo web de una aplicación basada en React para buscar información entorno a los personajes de la serie de Rick y morty._
 
