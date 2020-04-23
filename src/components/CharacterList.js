@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 
 const CharacterList = (props) => {
 
-    const { dataList, value } = props;
+    const { dataList, name } = props;
 
     return (
-        <ul className="character-list-container">
+        <ul className="character-list-container" >
             {dataList
-                .filter(character => character.name.toLowerCase().includes(value.toLowerCase()))
+                .filter(character => character.name.toLowerCase().includes(name.toLowerCase()) )
                 .map(character =>
                     <li key={character.id}>
                         <Link to={`/character/${character.id}`}>

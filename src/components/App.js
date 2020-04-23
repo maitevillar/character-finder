@@ -13,10 +13,12 @@ class App extends React.Component {
 
     this.handleInputValue = this.handleInputValue.bind(this);
     this.renderCharacterCard = this.renderCharacterCard.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
 
     this.state = {
       data: [],
       value: '',
+      name: '',
     }
   }
 
@@ -34,6 +36,11 @@ class App extends React.Component {
     this.setState({ value: event.target.value })
   }
 
+  handleSearch(event) {
+    event.preventDefault();
+    this.setState({ name: this.state.value})
+  }
+
   renderCharacterCard(props) {
     const { data } = this.state;
     const urlId = props.match.params.id;
@@ -45,22 +52,23 @@ class App extends React.Component {
   }
 
   render() {
-    const { data, value } = this.state;
+    const { data, name } = this.state;
 
     return (
       <div className="App">
         <Switch>
           <Route exact path="/">
             <NameFilter handleInputValue={this.handleInputValue}
-              value={value}
+                        handleSearch={this.handleSearch}
+                        name={name}
             />
             <CharacterList dataList={data}
-              value={value}
+                           name={name}
             />
           </Route>
 
           <Route path="/character/:id"
-            render={this.renderCharacterCard}
+                 render={this.renderCharacterCard}
           />
 
         </Switch>

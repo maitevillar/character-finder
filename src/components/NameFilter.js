@@ -2,7 +2,7 @@ import React from 'react';
 
 const NameFilter = (props) => {
 
-  const { value } = props;
+  const { name, handleInputValue, handleSearch } = props;
 
   return (
     <form className="filter-container">
@@ -13,10 +13,11 @@ const NameFilter = (props) => {
           placeholder=' Introduce the title'
           name="searcher"
           id="input-form"
-          onChange={props.handleInputValue}
+          onChange={handleInputValue}
         />
+        <button className="filter-container__item--button" onClick={handleSearch}>search</button>
 
-        <span className="filter-container__item--preview"> You are looking for <span className="highlight"> _{value}_ </span> character </span>
+        <span className="filter-container__item--preview"> You have searched: <span className="highlight"> {name} </span> </span>
       </div>
     </form>
   )
