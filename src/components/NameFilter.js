@@ -8,15 +8,16 @@ const NameFilter = (props) => {
     <form className="filter-container">
 
       <div className="filter-container__item">
-        <input className="filter-container__item--nameinput"
+        <div className="filter-container__item--searcher"> 
+        <input className="nameinput"
           type="text"
           placeholder=' Introduce the title'
           name="searcher"
           id="input-form"
           onChange={handleInputValue}
         />
-        <button className="filter-container__item--button" onClick={handleSearch}>search</button>
-
+        <button className="button" onClick={handleSearch}>search</button>
+        </div>
         <span className="filter-container__item--preview"> You have searched: <span className="highlight"> {name} </span> </span>
       </div>
     </form>

@@ -7,8 +7,8 @@ const Character = (props) => {
 
     return (
         <div className="character" >
-            <h1 className="character__title"> {name} </h1>
             <h4 className="character__subtitle"> {specie} </h4>
+            <h1 className="character__title"> {name} </h1>
             <img className="character__picture" src={avatar} alt={id} />
         </div>
     )
