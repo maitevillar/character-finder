@@ -1,0 +1,57 @@
+.App{
+    padding: 50px 150px 50px 150px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.filter-container{
+    background-color: lightblue;
+
+    &__item{
+        background-color: lightcoral;
+
+        &--nameinput{
+            background-color: lightgoldenrodyellow;
+        }
+
+        &--button{
+            background-color: lightpink;
+        }
+
+        &--preview{
+            background-color: lightyellow;
+        }
+    }
+}
+
+.character-list-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+
+    &__item{
+        margin: 16px 16px;
+
+        .character{
+            border:2px solid linen;
+            padding: 10px;
+            max-width: 150px;
+            height: 300px;
+            overflow: hidden;
+
+            &__title {
+                color: lightpink;
+            }
+
+            &__subtitle {
+                color: lightsalmon;
+            }
+
+            &__picture {
+                border: 1px solid grey;
+                width: 100%;
+            }
+        }
+    }
+}
