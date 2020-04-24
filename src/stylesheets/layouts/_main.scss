@@ -1,7 +1,18 @@
 .App{
-    padding: 50px 150px 50px 150px;
+    padding: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(205, 226, 233, 0.288);
+    background: linear-gradient(141deg, rgba(16,16,56,1) 0%, rgba(35,45,152,1) 100%);
+    color:#43c32f;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    font-size: 12px;
+
+    
+    @include forTablet {
+        flex-direction: row; 
+    }
+
 }
 
 .hidden{
@@ -9,10 +20,11 @@
 }
 
 .preview{
-    color: lightblue;
     width:80%;
     margin-bottom: 10px;
-    padding-left: 0px;
+    padding: 0px;
+    border: 1px solid green;
+    border-radius: 20px;
 }
 
 .highlight{
@@ -23,21 +35,26 @@
 
 
 .filter-container{
-    border: 2px solid red;
+    flex-grow: 1;
+    // border: 2px solid #43c32f;
     border-radius: 10px;
-    height: 250px;
-    background-image: url('https://media.giphy.com/media/35nU79vBbeOm4/giphy.gif');
+    // background-image: url('https://media.giphy.com/media/35nU79vBbeOm4/giphy.gif');
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-bottom: 50px;
+    margin-right: 30px;
+    background: transparent;
+    box-shadow: 5px 10px 10px 10px #0e062b;
+    
+    
 
     &__item{
         top: 35%;
         padding: 20px;
 
         .filterbutton{
-            border: 1px solid grey;
+            border: 1px solid #43c32f;
+            color: #43c32f;
             background-color: transparent;
             padding: 7px;
             font-size: 12px;
@@ -50,7 +67,7 @@
             margin-bottom: 10px;
 
             .nameinput{
-                width: 40%;
+                width: 70%;
                 padding: 4px;
                 margin-right: 10px;
                 border-radius: 10px;
@@ -63,8 +80,9 @@
                 padding: 7px;
                 font-size: 10px;
                 border-radius: 10px;
-                border: 1px solid grey;
+                border: 1px solid #43c32f;
                 padding: 5px;
+                color: #43c32f;
             }
         }
 
@@ -84,43 +102,83 @@
 }
 
 .character-list-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: space-around;
+    flex-grow: 6;
+    margin-top: 20px;
+    box-shadow: 5px 10px 10px 10px #0e062b;
+
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    // grid-template-rows: 25% 25% 25% 25%;
+    align-content: stretch;
+
+    @include forTablet {
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    @include forPc {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+
 
     &__item{
-        margin: 16px 16px;
-        border: grey solid 2px;
+        margin: 20px;
+        height: fit-content;
+        box-shadow: 5px 5px 5px 5px #0e062b;
+        border-radius: 10px;
+    }
 
-        :hover{
+        :hover .character__text{
             background-color: rgb(93, 116, 124);
+            transform: translateY(0%);
         }
 
-        .character{
-            padding: 10px;
-            max-width: 150px;
-            height: 300px;
+        :hover .character__picture{
+            transform: scale(1.15);
+        }
+
+
+         .character{
+            position: relative;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-
-            &__subtitle {
-                color: lightgrey;
-            }
-
-            &__title {
-                color: lightblue;
-                width: 90%;
-                font-size: 20px;
-            }
 
             &__picture {
                 width: 100%;
-                position: relative;
+                transition: all 0.5s;
+                border-radius: 10px;
             }
+
+            &__text{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 20px;
+                background-color: rgba(0,0,0,0.5);
+                color: white;
+
+                transform: translateY(100%);
+                transition: all 0.5s ease-out;
+            }
+
+
+    //         padding: 10px;
+    //         max-width: 150px;
+    //         height: 300px;
+    //         overflow: hidden;
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: space-evenly;
+
+    //         &__subtitle {
+    //             color: lightgrey;
+    //         }
+
+    //         &__title {
+    //             color: lightblue;
+    //             width: 90%;
+    //             font-size: 20px;
+    //         }
+
         }
-    }
+    // }
 }
