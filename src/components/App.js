@@ -19,27 +19,29 @@ class App extends React.Component {
       data: [],
       value: '',
       name: '',
-      local: '',
     }
   }
 
-  componentDidUpdate() {
-    localStorage.setItem('local', this.state.value)
-  }
 
   componentDidMount() {
+    const localValue = JSON.parse(localStorage.getItem('localValue'));
+    if(localValue !== null){
+      this.setState({
+        name:localValue
+      })
+    }
+
     fetchData()
       .then(data => {
         this.setState({
           data: data.results
         })
       })
-      
-      if (localStorage !== undefined){
-        this.setState ({
-          local: localStorage.local,
-        })
-      }
+
+  }
+
+  componentDidUpdate(){
+    localStorage.setItem('localValue', JSON.stringify(this.state.name));
   }
 
   handleInputValue(event) {
@@ -49,9 +51,9 @@ class App extends React.Component {
 
   handleSearch(event) {
     event.preventDefault();
-    this.setState({ name: this.state.value})
+    this.setState({ name: this.state.value })
   }
-  
+
   renderCharacterCard(props) {
     const { data } = this.state;
     const urlId = props.match.params.id;
@@ -70,8 +72,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/">
             <NameFilter handleInputValue={this.handleInputValue}
-                        handleSearch={this.handleSearch}
-                        name={name}
+              handleSearch={this.handleSearch}
+              name={name}
             />
             <CharacterList dataList={data}
                            name={name}
@@ -79,7 +81,7 @@ class App extends React.Component {
           </Route>
 
           <Route path="/character/:id"
-                 render={this.renderCharacterCard}
+            render={this.renderCharacterCard}
           />
 
         </Switch>

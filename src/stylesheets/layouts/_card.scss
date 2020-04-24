@@ -1,0 +1,19 @@
+.character-card-container__list{
+    &--item2{
+        margin-top: 5px;
+    }
+
+    &--item3{
+        margin-top: 5px;
+    }
+    
+    &--item4{
+      margin-top: 2px;
+        
+      .status-icon{
+        width: 17px;
+        height: 17px;
+        margin-left: 7px;
+        }
+    }
+}

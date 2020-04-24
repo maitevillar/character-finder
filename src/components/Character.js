@@ -6,7 +6,7 @@ const Character = (props) => {
     const { id, name, specie, avatar } = props;
 
     return (
-        <div className="character" >
+        <div className="character">
             <h4 className="character__subtitle"> {specie} </h4>
             <h1 className="character__title"> {name} </h1>
             <img className="character__picture" src={avatar} alt={id} />
