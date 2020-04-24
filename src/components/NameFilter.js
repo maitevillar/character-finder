@@ -8,16 +8,17 @@ const NameFilter = (props) => {
     <form className="filter-container">
 
       <div className="filter-container__item">
-        <input className="filter-container__item--nameinput"
+        <div className="filter-container__item--searcher"> 
+        <input className="nameinput"
           type="text"
           placeholder=' Introduce the title'
           name="searcher"
           id="input-form"
           onChange={handleInputValue}
         />
-        <button className="filter-container__item--button" onClick={handleSearch}>search</button>
-
-        <span className="filter-container__item--preview"> You have searched: <span className="highlight"> {name} </span> </span>
+        <button className="button" onClick={handleSearch}>search</button>
+        </div>
+        <span className="filter-container__item--preview"> The name you are looking for includes: <span className="highlight"> {name} </span> </span>
       </div>
     </form>
   )

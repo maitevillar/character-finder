@@ -6,10 +6,10 @@ const Character = (props) => {
     const { id, name, specie, avatar } = props;
 
     return (
-        <div className="__character">
-            <h1 className="__character--title"> {name} </h1>
-            <h4 className="__character--subtitle"> {specie} </h4>
-            <img className="__character--picture" src={avatar} alt={id} />
+        <div className="character" >
+            <h4 className="character__subtitle"> {specie} </h4>
+            <h1 className="character__title"> {name} </h1>
+            <img className="character__picture" src={avatar} alt={id} />
         </div>
     )
 }

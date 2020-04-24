@@ -12,7 +12,8 @@ const CharacterList = (props) => {
             {dataList
                 .filter(character => character.name.toLowerCase().includes(name.toLowerCase()) )
                 .map(character =>
-                    <li key={character.id}>
+                    <li className="character-list-container__item"
+                        key={character.id}>
                         <Link to={`/character/${character.id}`}>
                             <Character id={character.id}
                                 name={character.name}

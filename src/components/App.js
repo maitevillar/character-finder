@@ -19,7 +19,12 @@ class App extends React.Component {
       data: [],
       value: '',
       name: '',
+      local: '',
     }
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem('local', this.state.value)
   }
 
   componentDidMount() {
@@ -29,6 +34,12 @@ class App extends React.Component {
           data: data.results
         })
       })
+      
+      if (localStorage !== undefined){
+        this.setState ({
+          local: localStorage.local,
+        })
+      }
   }
 
   handleInputValue(event) {
@@ -40,7 +51,7 @@ class App extends React.Component {
     event.preventDefault();
     this.setState({ name: this.state.value})
   }
-
+  
   renderCharacterCard(props) {
     const { data } = this.state;
     const urlId = props.match.params.id;
