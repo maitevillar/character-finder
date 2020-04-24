@@ -18,7 +18,7 @@ const NameFilter = (props) => {
         />
         <button className="button" onClick={handleSearch}>search</button>
         </div>
-        <span className="filter-container__item--preview"> You have searched: <span className="highlight"> {name} </span> </span>
+        <span className="filter-container__item--preview"> The name you are looking for includes: <span className="highlight"> {name} </span> </span>
       </div>
     </form>
   )
