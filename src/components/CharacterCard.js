@@ -8,6 +8,7 @@ const CharacterCard = (props) => {
     
     const { character } = props;
 
+
     return (
         <div className="character-card-wrapper">
             <Link to={`/#`}> <i className="return">home</i> </Link>
