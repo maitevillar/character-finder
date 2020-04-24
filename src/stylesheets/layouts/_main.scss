@@ -4,7 +4,27 @@
     background-color: rgba(205, 226, 233, 0.288);
 }
 
+.hidden{
+    display:none;
+}
+
+.preview{
+    color: lightblue;
+    width:80%;
+    margin-bottom: 10px;
+    padding-left: 0px;
+}
+
+.highlight{
+    color: lightblue;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
 .filter-container{
+    border: 2px solid red;
+    border-radius: 10px;
     height: 250px;
     background-image: url('https://media.giphy.com/media/35nU79vBbeOm4/giphy.gif');
     background-position: right;
@@ -13,38 +33,54 @@
     margin-bottom: 50px;
 
     &__item{
-        position: relative;
         top: 35%;
         padding: 20px;
+
+        .filterbutton{
+            border: 1px solid grey;
+            background-color: transparent;
+            padding: 7px;
+            font-size: 12px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
         
         &--searcher{
+            background-color: transparent;
+            margin-bottom: 10px;
 
             .nameinput{
                 width: 40%;
-                padding: 5px;
-                margin-bottom: 15px;
+                padding: 4px;
+                margin-right: 10px;
+                border-radius: 10px;
                 border: 1px solid grey;
+                font-size: 12px;
             }
 
-            .button{
-                background-color: lightblue;
-                border: lightblue solid 1px;
-                margin-left: 15px;
+            .inputbutton{
+                background-color: transparent;
+                padding: 7px;
+                font-size: 10px;
+                border-radius: 10px;
+                border: 1px solid grey;
                 padding: 5px;
             }
         }
 
-        &--preview{
-            color: lightblue;
-            width:50%;
+        &--filters{
+            font-size: 12px;
+            
+            .label-2{
+                margin-right: 10px;
+            }
+
+            .checkinput{
+                vertical-align: middle;
+                border: 1px grey solid;
+            }
         }
     }
-}
-
-.highlight{
-    color: lightblue;
-    font-weight: 700;
-    font-size: 16px;
 }
 
 .character-list-container{
