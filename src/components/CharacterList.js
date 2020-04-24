@@ -5,13 +5,21 @@ import { Link } from 'react-router-dom';
 
 const CharacterList = (props) => {
 
-    const { dataList, name } = props;
+    const { name } = props;
+    const datacontent = [ ...props.data]
 
-    return (
+    .filter(character => character.name === '' | character.name.toLowerCase().includes(name.toLowerCase()));
+
+    if(datacontent.length === 0) {
+        return <p> Error </p>
+    } else {
+        console.log('results'+ datacontent)
+        return (
         <ul className="character-list-container" >
-            {dataList
-                .filter(character => character.name.toLowerCase().includes(name.toLowerCase()) )
+            {datacontent
+                .sort((character, character2) => character.name.localeCompare (character2.name))
                 .map(character =>
+
                     <li className="character-list-container__item"
                         key={character.id}>
                         <Link to={`/character/${character.id}`}>
@@ -25,6 +33,7 @@ const CharacterList = (props) => {
                 )}
         </ul>
     )
+    }
 }
 
 // CharacterList.propTypes = {

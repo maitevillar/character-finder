@@ -75,7 +75,7 @@ class App extends React.Component {
               handleSearch={this.handleSearch}
               name={name}
             />
-            <CharacterList dataList={data}
+            <CharacterList data={data}
                            name={name}
             />
           </Route>
