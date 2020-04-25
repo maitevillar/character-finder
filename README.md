@@ -53,7 +53,8 @@ $ npm start
 ```
 
 ## Imagenes de la web 💻
-![filter](/_src/images/filter.gif)
+
+![filter](/src/images/filter.gif)
 
 ---
 ⌨️ con ❤️ por [Maite Villar]
