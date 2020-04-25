@@ -28,12 +28,11 @@ class App extends React.Component {
     }
   }
 
-
   componentDidMount() {
     const localValue = JSON.parse(localStorage.getItem('localValue'));
-    if(localValue !== null){
+    if (localValue !== null) {
       this.setState({
-        name:localValue
+        name: localValue
       })
     }
 
@@ -43,10 +42,9 @@ class App extends React.Component {
           data: data.results
         })
       })
-
   }
 
-  componentDidUpdate(){
+  componentDidUpdate() {
     localStorage.setItem('localValue', JSON.stringify(this.state.name));
   }
 
@@ -57,7 +55,7 @@ class App extends React.Component {
 
   handleSearch(event) {
     event.preventDefault();
-    this.setState({ 
+    this.setState({
       name: this.state.value,
       search: true,
     })
@@ -73,7 +71,7 @@ class App extends React.Component {
     }
   }
 
-  handleCheckbox(){
+  handleCheckbox() {
     this.setState(prevState => {
       return {
         isLocal: !prevState.isLocal
@@ -81,7 +79,7 @@ class App extends React.Component {
     })
   }
 
-  reset(){
+  reset() {
     this.setState(prevState => {
       return {
         value: '',
@@ -97,28 +95,27 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Header/>
+        <Header />
         <Switch>
           <Route exact path="/">
             <NameFilter handleInputValue={this.handleInputValue}
-                        handleSearch={this.handleSearch}
-                        name={name}
-                        handleCheckbox={this.handleCheckbox}
-                        isLocal={isLocal}
-                        reset={this.reset}
-                        isSearched={this.isSearched}
-                        search={search}
+              handleSearch={this.handleSearch}
+              name={name}
+              handleCheckbox={this.handleCheckbox}
+              isLocal={isLocal}
+              reset={this.reset}
+              isSearched={this.isSearched}
+              search={search}
             />
             <CharacterList data={data}
-                           name={name}
-                           isLocal={isLocal} 
+              name={name}
+              isLocal={isLocal}
             />
           </Route>
           <Route path="/character/:id"
             render={this.renderCharacterCard}
           />
           <Route component={NotFound} />
-
         </Switch>
       </div>
     );

@@ -9,7 +9,6 @@ const CharacterList = (props) => {
     const { name, isLocal } = props
     const datacontent = [...props.data]
 
-
         .filter(character => character.name === '' | character.name.toLowerCase().includes(name.toLowerCase()))
 
     if (datacontent.length === 0) {
