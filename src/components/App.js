@@ -5,6 +5,7 @@ import CharacterList from './CharacterList'
 import NameFilter from './NameFilter'
 import CharacterCard from './CharacterCard'
 import NotFound from './Notfound'
+import Header from './Header'
 import { Switch, Route } from 'react-router-dom';
 
 
@@ -96,6 +97,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <Header/>
         <Switch>
           <Route exact path="/">
             <NameFilter handleInputValue={this.handleInputValue}

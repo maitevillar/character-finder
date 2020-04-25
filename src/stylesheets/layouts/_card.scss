@@ -1,19 +1,126 @@
-.character-card-container__list{
-    &--item2{
-        margin-top: 5px;
+.character-card-wrapper{
+    padding: 0px 0px 100px 0px;
+
+    .return{
+        text-align: middle;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: $lightcolor;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-style: unset;
+        background-color: #96cee856;
+        padding: 10px 20px 10px 20px;
+        border-radius: 18px;
+        box-shadow: 2px 2px 15px 2px $darkcolor;
+
+        :hover{
+            text-decoration: underline;
+        }
+
     }
 
-    &--item3{
-        margin-top: 5px;
-    }
-    
-    &--item4{
-      margin-top: 2px;
+    .character-card-container{
+        border-radius: 10px;
+        margin-top: 30px;
+        padding: 20px 30px 20px 30px;
+        background-color: #96cee856 ;
+        box-shadow: 2px 5px 14px 5px $darkcolor;
+        display: flex;
+        flex-direction: column;
         
-      .status-icon{
-        width: 17px;
-        height: 17px;
-        margin-left: 7px;
+        @include forPc {
+        flex-direction: row;
         }
+
+        &__picture{
+            border-radius: 10px;
+            box-shadow: 2px 5px 14px 5px $darkcolor;
+            margin-right: 30px;
+            min-width: 200px;
+            max-width: 300px;
+
+            @include forPc {
+                min-width: 200px;
+                max-width: 100%;
+                }
+        }
+
+        &__text{
+
+            &--title{
+                font-weight: 700;
+                text-shadow: 2px 1px 4px $darkcolor;
+                color: $lightcolor;
+            }
+    
+            &--list{
+                color: $lightcolor;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 1px;
+                font-size: 13px;
+                line-height: 25px;
+
+        
+                .item4{
+                  margin-top: 2px;
+                    
+                  .status-icon{
+                    width: 17px;
+                    height: 17px;
+                    margin-left: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.highlight-card{
+    font-weight: 700;
+    text-shadow: 2px 1px 4px $darkcolor;
+    color: $lightcolor;
+}
+
+.not-found{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &__text{
+        color: white;
+        margin-right: 40px;
+
+        .nf-title{
+        font-weight: 700;
+        font-size: 130px;
+        margin-bottom: 20px;
+        }
+
+        .nf-text{
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        .nf-button{
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-align: middle;
+            text-transform: uppercase;
+            font-size: 10px;
+            color: $lightcolor;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-style: unset;
+            padding: 10px 20px 10px 20px;
+            border-color: $mediumcolor;
+            background-color: #96cee856;
+            border-radius: 18px;
+            box-shadow: 2px 2px 15px 2px $darkcolor;
+        }
+
+
     }
 }

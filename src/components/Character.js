@@ -7,9 +7,9 @@ const Character = (props) => {
 
     return (
         <div className="character">
-            <h4 className="character__subtitle"> {specie} </h4>
-            <h1 className="character__title"> {name} </h1>
             <img className="character__picture" src={avatar} alt={id} />
+            <section className="character__text"> <h4 className="character__text--subtitle"> {specie} </h4>
+            <h1 className="character__text--title"> {name} </h1></section>
         </div>
     )
 }
