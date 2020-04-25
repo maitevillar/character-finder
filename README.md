@@ -54,7 +54,14 @@ $ npm start
 
 ## Imagenes de la web 💻
 
+- Busqueda por nombres y un selector para mostrar únicamente a los personajes con el planeta origen **tierra**.
 ![filter](/src/images/filter.gif)
+
+- Efectos sobre los personajes.
+![filter](/src/images/hover.gif)
+
+- Ruta erronea.
+![filter](/src/images/error.gif)
 
 ---
 ⌨️ con ❤️ por [Maite Villar]
