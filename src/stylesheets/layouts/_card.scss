@@ -1,4 +1,13 @@
+.character-card-wrapper{
+    border: solid 2px red;
+
+    .character-card-container{
+        border: solid 2px green;
+    }
+}
+
 .character-card-container__list{
+
     &--item2{
         margin-top: 5px;
     }

@@ -25,7 +25,7 @@ const NameFilter = (props) => {
             onChange={handleInputValue}
           />
           <button className="inputbutton"
-            onClick={handleSearch}> search</button>
+            onClick={handleSearch}> Search </button>
         </div>
 
         <div className={`filter-container__item ${search !== true ? 'hidden' : 'preview'}`} > The name you are looking for includes: <span className="highlight"> {name} </span> </div>
