@@ -52,9 +52,8 @@ $ npm install
 $ npm start
 ```
 
-## Estructura 💻
-
-
+## Imagenes de la web 💻
+![filter](/_src/images/filter.gif)
 
 ---
 ⌨️ con ❤️ por [Maite Villar]
